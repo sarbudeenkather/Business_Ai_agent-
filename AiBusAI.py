@@ -1,7 +1,7 @@
 import streamlit as st
 from google import genai
 from PIL import Image
-mybot =genai.Client(api_key="AIzaSyCNOPu4-KxSY1n8Bz4DmULLA-ClJV32Am0")
+mybot =genai.Client(api_key="YOUR API KEY")
 st.markdown(
     """
     <style>
@@ -46,9 +46,6 @@ with col1:
             response= mybot.models.generate_content(model="gemini-1.5-flash",
                                                     contents=question
                                                     )
-            # st.subheader("AI Suggestions:")
-            # if response.text:
-            #     st.write(response.text)
         else:
             st.error("please fill the required fields.")
 with col2:
